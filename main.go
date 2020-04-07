@@ -66,4 +66,11 @@ func main() {
 	clean := r2.ReplaceAllString(copy, "Girls")
 
 	fmt.Println(clean)
+
+	// 7 numbering match
+	colors := "BPRYG"
+	r3 := regexp.MustCompile(`BP([A-Z])Y([A-Z])`)
+	colors = r3.ReplaceAllString(colors, "BP\x1b[31m${1}\x1b[0mY\x1b[32m${2}\x1b[0m")
+
+	fmt.Println(colors)
 }
