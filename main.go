@@ -43,4 +43,20 @@ func main() {
 	checkRegexp(`c?x`, "x")
 	checkRegexp(`c?x`, "climaxxxxx")
 	checkRegexp(`c?x`, "hcg")
+
+	// 5 number, alphabet
+	checkRegexp(`[HCG]`, "C")
+	checkRegexp(`[HCG]`, "H")
+	checkRegexp(`[HCG]`, "A")
+
+		// range
+	checkRegexp(`[0-9]`, "5")
+	checkRegexp(`[0-9]`, "S")
+	checkRegexp(`[A-Z]`, "S")
+	checkRegexp(`[A-Z]`, "5")
+	checkRegexp(`[A-Z]`, "j")
+
+		// negation
+	checkRegexp(`[^0-9]`, "S")
+	checkRegexp(`[^0-9]`, "5")
 }
