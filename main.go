@@ -59,4 +59,11 @@ func main() {
 		// negation
 	checkRegexp(`[^0-9]`, "S")
 	checkRegexp(`[^0-9]`, "5")
+
+	// 6 replace
+	copy := "Boys are always climax after school!"
+	re := regexp.MustCompile(`[A-Z][a-z]*s`)
+	clean := re.ReplaceAllString(copy, "Girls")
+
+	fmt.Println(clean)
 }
