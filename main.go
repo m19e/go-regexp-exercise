@@ -35,4 +35,12 @@ func main() {
 	checkRegexp(`c+x`, "x")
 	checkRegexp(`c+x`, "climaxxxxx")
 	checkRegexp(`c+x`, "hcg")
+
+	// 4 repeat "?"
+	checkRegexp(`c?x`, "climax")
+	checkRegexp(`c?x`, "cx")
+	checkRegexp(`c?x`, "cccccx")
+	checkRegexp(`c?x`, "x")
+	checkRegexp(`c?x`, "climaxxxxx")
+	checkRegexp(`c?x`, "hcg")
 }
