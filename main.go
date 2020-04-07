@@ -5,6 +5,11 @@ import (
 	"regexp"
 )
 
+func checkRegexp(reg, s string) {
+	fmt.Printf("「%s」match「%s」? =>", reg, s)
+	fmt.Println(regexp.MustCompile(reg).Match([]byte(s)))
+}
+
 func main() {
 	// 0
 	r := regexp.MustCompile(`golang`)
