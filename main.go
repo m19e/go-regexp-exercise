@@ -62,8 +62,8 @@ func main() {
 
 	// 6 replace
 	copy := "Boys are always climax after school!"
-	re := regexp.MustCompile(`[A-Z][a-z]*s`)
-	clean := re.ReplaceAllString(copy, "Girls")
+	r2 := regexp.MustCompile(`[A-Z][a-z]*s`)
+	clean := r2.ReplaceAllString(copy, "Girls")
 
 	fmt.Println(clean)
 }
