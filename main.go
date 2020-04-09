@@ -49,14 +49,14 @@ func main() {
 	checkRegexp(`[HCG]`, "H")
 	checkRegexp(`[HCG]`, "A")
 
-		// range
+	// range
 	checkRegexp(`[0-9]`, "5")
 	checkRegexp(`[0-9]`, "S")
 	checkRegexp(`[A-Z]`, "S")
 	checkRegexp(`[A-Z]`, "5")
 	checkRegexp(`[A-Z]`, "j")
 
-		// negation
+	// negation
 	checkRegexp(`[^0-9]`, "S")
 	checkRegexp(`[^0-9]`, "5")
 
