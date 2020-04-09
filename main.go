@@ -73,4 +73,8 @@ func main() {
 	colors = r3.ReplaceAllString(colors, "BP\x1b[31m${1}\x1b[0mY\x1b[32m${2}\x1b[0m")
 
 	fmt.Println(colors)
+
+	// include "\n" match
+	checkRegexp(`^(ko.*)$`, "kaho\nkomiya")
+	checkRegexp(`(?m)^(ar.*)$`, "natsuha\narisugawa")
 }
