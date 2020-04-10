@@ -77,4 +77,13 @@ func main() {
 	// 8 include "\n" match
 	checkRegexp(`^(ko.*)$`, "kaho\nkomiya")
 	checkRegexp(`(?m)^(ar.*)$`, "natsuha\narisugawa")
+
+	// 9 split pattern e.g. csv or tsv
+	data := "Pink,SONODA Chiyoko, Chiba"
+	r4 := regexp.MustCompile(`\s*,\s*`)
+	mold := r4.Split(data, -1)
+
+	fmt.Println(mold[0])
+	fmt.Println(mold[1])
+	fmt.Println(mold[2])
 }
