@@ -97,4 +97,9 @@ func main() {
 	for _, d := range cast {
 		fmt.Println(d[1], d[2])
 	}
+
+	// 11 use String var in Regexp
+	exp := `(?m)(.*o)$`
+	reg := regexp.MustCompile(exp)
+	fmt.Println(reg.FindAllStringSubmatch("kaho\nnatsuha\nrinze\njuri\nchiyoko", -1))
 }
