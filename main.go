@@ -74,7 +74,7 @@ func main() {
 
 	fmt.Println(colors)
 
-	// include "\n" match
+	// 8 include "\n" match
 	checkRegexp(`^(ko.*)$`, "kaho\nkomiya")
 	checkRegexp(`(?m)^(ar.*)$`, "natsuha\narisugawa")
 }
