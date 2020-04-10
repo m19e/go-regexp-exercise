@@ -86,4 +86,15 @@ func main() {
 	fmt.Println(mold[0])
 	fmt.Println(mold[1])
 	fmt.Println(mold[2])
+
+	// 10 match to Slice
+	info := "kaho:12-163-45 natsuha:20-168-49 rinze:16-155-44 juri:17-160-48 chiyoko:17-149-46"
+	r5 := regexp.MustCompile(`[\d\-]+`)
+	fmt.Println(r5.FindAllStringSubmatch(info, -1))
+
+	r6 := regexp.MustCompile(`(\S+):([\d\-]+)`)
+	cast := r6.FindAllStringSubmatch(info, -1)
+	for _, d := range cast {
+		fmt.Println(d[1], d[2])
+	}
 }
